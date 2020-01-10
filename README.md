@@ -2,4 +2,5 @@
 Ver a previsão da real
 
 ## API
-- https://openweathermap.org/api
+- http://www.geoplugin.net/
+- https://openweathermap.org/api (Must Sign Up to Consume)

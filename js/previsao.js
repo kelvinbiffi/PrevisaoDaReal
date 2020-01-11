@@ -131,7 +131,9 @@ class PrevisaoDaReal {
         this.cache.body.style.backgroundColor = avatar.color;
         this.cache.mainContent.insertAdjacentElement('afterBegin', img);
 
-        this.cache.spinnerContent.classList.add('hide');
+        setTimeout(() => {
+            this.cache.spinnerContent.classList.add('hide');
+        }, 2000);
     }
 
     showInfoScreen () {

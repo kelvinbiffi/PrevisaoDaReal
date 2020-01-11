@@ -82,7 +82,7 @@ class PrevisaoDaReal {
      * Get IP and City Information
      */
     async getIPFromCF () {
-        const cityInfo = await this.getDataFromCache('http://www.geoplugin.net/json.gp', 60);
+        const cityInfo = await this.getDataFromCache('https://ipapi.co/json/', 60);
         this.getWhetherByIP(cityInfo);
     }
 
@@ -92,7 +92,7 @@ class PrevisaoDaReal {
      * @param {JSON} cityInfo 
      */
     async getWhetherByIP (cityInfo) {
-        const URL = `http://api.openweathermap.org/data/2.5/weather?lat=${cityInfo.geoplugin_latitude}&lon=${cityInfo.geoplugin_longitude}&APPID=3d9543d41cc5c347c206faa9de23d798&units=metric`;
+        const URL = `http://api.openweathermap.org/data/2.5/weather?lat=${cityInfo.latitude}&lon=${cityInfo.longitude}&APPID=3d9543d41cc5c347c206faa9de23d798&units=metric`;
         const whetherInfo = await this.getDataFromCache(URL, 5);
         this.getTerms(cityInfo, whetherInfo);
     }

@@ -1,0 +1,68 @@
+{
+    "avatar": {
+        "calor": [
+            {
+                "image": "https://api.adorable.io/avatars/300/341",
+                "color": "#BFF288"
+            },
+            {
+                "image": "https://api.adorable.io/avatars/300/347",
+                "color": "#F6BE5D"
+            }
+        ],
+        "fresco": [
+            {
+                "image": "https://api.adorable.io/avatars/300/24g5b",
+                "color": "#AD8BF2"
+            },
+            {
+                "image": "https://api.adorable.io/avatars/300/24g5",
+                "color": "#AD8BF2"
+            }
+        ],
+        "frio": [
+            {
+                "image": "https://api.adorable.io/avatars/300/341",
+                "color": "#BFF288"
+            }
+        ]
+    },
+    "frase": {
+        "calor": [
+            "Abriram as portas do inferno porra!",
+            "Isso não é calor, é amostra grátis do inferno!",
+            "Certo que a Frozen já teve um treco!",
+            "Mínima de morte, máxima de cremação!",
+            "Chama esse calor de salário para ver se ele vai embora mais rápido!",
+            "Tá tão quente que fui cuspir e assoviei!",
+            "Tá tão quente que da pra comer bacon direto do porco!",
+            "Quero ver assassino ser sangue frio com um calor desses!"
+        ],
+        "fresco": [
+            "Hoje ta fresquinho que to só!",
+            "Eu não gosto nem do calor e nem do frio, eu gosto é de reclamar da temperatura!"
+        ],
+        "frio": [
+            "Ta frio a beça que até os farol tão ligando!",
+            "Ta frio de renguea cusco",
+            "Diz que gosta do frio, mas parece um pinguim caminhando!",
+            "Vai nessa que o frio é piscicológico!"
+        ]
+    },
+    "humidade": {
+        "muito": [
+            "Essa humidade ta de molhar o rego!",
+            "Essa humidade ta de se molhar Toddynho!",
+            " "
+        ],
+        "pouco": [
+            " mas não tem nem um pingo de humidade nessa joça!"
+        ]
+    },
+    "chuva": {
+        "muito": [
+            "Essa chuva vai mocozea o rolê!",
+            "Esqueceram de desligar a torneira do céu!"
+        ]
+    }
+}

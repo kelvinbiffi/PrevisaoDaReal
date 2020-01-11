@@ -1,5 +1,7 @@
 /* IMPORTS */
 @import url('https://fonts.googleapis.com/css?family=Barlow&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Kumar+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC&display=swap');
 
 /* KEYFRAMES */
 
@@ -90,6 +92,10 @@ html, body {
     font-family: 'Barlow', sans-serif;
     margin: 0;
     padding: 0;
+}
+
+.hide {
+    display: none;
 }
 
 .spinner-content {
@@ -229,13 +235,118 @@ html, body {
 }
 
 /* HEADER */
+header {
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Kumar One', cursive;
+}
+
+@media screen and (max-width: 940px) {
+    header h1 {
+        margin-bottom: 0;
+    }
+}
 
 /* MAIN */
 
 main {
+    text-align: center;
+}
 
+@media screen and (max-width: 940px) {
+    main {
+        height: 100vh;
+    }
 }
 
 main .content {
-    padding: 0 20%;
+    padding: 20px 70px;
+    width: 100%;
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+    min-height: 100vh;
+}
+
+@media screen and (max-width: 940px) {
+    main .content {
+        padding: 0 10px;
+        text-align: center;
+    }
+}
+
+main .content img {
+    width: 300px;
+    display: inline-block;
+}
+
+@media screen and (max-width: 940px) {
+    main .content img {
+        width: 150px;
+        display: inline-block;
+    }
+}
+
+main .content .whether-info {
+    display: inline-block;
+    width: calc(100% - 300px);
+    margin: 0 -2px;
+}
+
+@media screen and (max-width: 940px) {
+    main .content .whether-info {
+        display: inline-block;
+        width: 100%;
+    }
+
+    main .content .whether-info p {
+        margin: 10px 0;
+    }
+}
+
+main .whether-info {
+    display: inline-block;
+    vertical-align: text-bottom;
+    padding: 10px;
+}
+
+main .whether-info {
+    font-weight: 600;
+}
+
+main .whether-info .da-real {
+    font-family: 'Amatic SC', cursive;
+    font-size: 40px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+footer div {
+    background: #333;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+footer h3 {
+    color: #F2F2F2;
+}
+
+footer p {
+    color: #F2F2F2;
+    padding: 5px 0;
+}
+
+footer a {
+    padding: 10px 20px;
+    color: #333;
+    background-color: #F2F2F2;
+    font-weight: 900;
+    text-decoration: none;
+    border-radius: 5px;
 }

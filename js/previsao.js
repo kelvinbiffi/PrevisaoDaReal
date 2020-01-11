@@ -92,7 +92,7 @@ class PrevisaoDaReal {
      * @param {JSON} cityInfo 
      */
     async getWhetherByIP (cityInfo) {
-        const URL = `http://api.openweathermap.org/data/2.5/weather?lat=${cityInfo.latitude}&lon=${cityInfo.longitude}&APPID=3d9543d41cc5c347c206faa9de23d798&units=metric`;
+        const URL = `https://api.openweathermap.org/data/2.5/weather?lat=${cityInfo.latitude}&lon=${cityInfo.longitude}&APPID=3d9543d41cc5c347c206faa9de23d798&units=metric`;
         const whetherInfo = await this.getDataFromCache(URL, 5);
         this.getTerms(cityInfo, whetherInfo);
     }
@@ -132,7 +132,7 @@ class PrevisaoDaReal {
         this.cache.mainContent.insertAdjacentElement('afterBegin', img);
 
         setTimeout(() => {
-            this.cache.spinnerContent.classList.add('hide');
+            this.cache.body.classList.add('show');
         }, 2000);
     }
 

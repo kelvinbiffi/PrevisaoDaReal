@@ -108,9 +108,9 @@ class PrevisaoDaReal {
         const terms = await this.getDataFromCache('js/previsao.json', 1);
         console.log(terms);
 
-        this.cache.sensacao.textContent = `Sensação térmica: ${whether.main.feels_like}`;
+        this.cache.sensacao.textContent = `Sensação térmica: ${whether.main.feels_like} °C`;
         this.cache.temperatura.textContent = `Mínima: ${whether.main.temp_min} °C, Máxima: ${whether.main.temp_max} °C`;
-        this.cache.humidade.textContent = `Humidade ${whether.main.humidity}%`;
+        this.cache.humidade.textContent = `Umidade ${whether.main.humidity}%`;
 
         let avatar, frase;
         if (whether.main.feels_like < 12) {

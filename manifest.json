@@ -1,0 +1,21 @@
+{
+    "short_name": "Previsão da Real",
+    "name": "Previsão da Real",
+    "icons": [
+      {
+        "src": "/images/icon.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/images/icon.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "/?source=pwa",
+    "background_color": "#333333",
+    "display": "fullscreen",
+    "scope": "/",
+    "theme_color": "#333333"
+  }

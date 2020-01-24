@@ -6,7 +6,7 @@ class PrevisaoDaReal {
      * Contructor function
      */
     constructor () {
-        this.getIPFromCF();
+        this.getIP();
         this.cache = {
             body:  document.querySelector('body'),
             spinnerContent: document.querySelector('.spinner-content'),
@@ -81,33 +81,44 @@ class PrevisaoDaReal {
     /**
      * Get IP and City Information
      */
-    async getIPFromCF () {
+    async getIP () {
         const cityInfo = await this.getDataFromCache('https://ipapi.co/json/', 60);
-        this.getWhetherByIP(cityInfo);
+        this.getWhetherByLatitudeLongitude(cityInfo);
     }
 
     /**
-     * Get whether information
+     * Get whether information by latitude and longitude
      * 
      * @param {JSON} cityInfo 
      */
-    async getWhetherByIP (cityInfo) {
+    async getWhetherByLatitudeLongitude (cityInfo) {
         const URL = `https://api.openweathermap.org/data/2.5/weather?lat=${cityInfo.latitude}&lon=${cityInfo.longitude}&APPID=3d9543d41cc5c347c206faa9de23d798&units=metric`;
         const whetherInfo = await this.getDataFromCache(URL, 5);
-        this.getTerms(cityInfo, whetherInfo);
+        const termsInfo = await this.getTerms(cityInfo, whetherInfo);
+        this.displayInfoScreen(cityInfo, whetherInfo, termsInfo);
     }
 
     /**
-     * Get avatar for the whether
+     * Get avatar and terms for the whether
      * 
      * @param {JSON} city 
-     * @param {JSON} whether 
+     * @param {JSON} whether
+     * 
+     * @return {JSON}
      */
     async getTerms (city, whether) {
         console.log(city,whether);
-        const terms = await this.getDataFromCache('js/previsao.json', 1);
-        console.log(terms);
+        return await this.getDataFromCache('js/previsao.json', 1);
+    }
 
+    /**
+     * Display infos at the screen
+     * 
+     * @param {JSON} city 
+     * @param {JSON} whether 
+     * @param {JSON} terms
+     */
+    displayInfoScreen (city, whether, terms) {
         this.cache.sensacao.textContent = `Sensação térmica: ${whether.main.feels_like} °C`;
         this.cache.temperatura.textContent = `Mínima: ${whether.main.temp_min} °C, Máxima: ${whether.main.temp_max} °C`;
         this.cache.humidade.textContent = `Umidade ${whether.main.humidity}%`;
@@ -134,10 +145,6 @@ class PrevisaoDaReal {
         setTimeout(() => {
             this.cache.body.classList.add('show');
         }, 2000);
-    }
-
-    showInfoScreen () {
-
     }
 
 }

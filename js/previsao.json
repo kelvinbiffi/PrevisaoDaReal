@@ -22,8 +22,12 @@
         ],
         "frio": [
             {
-                "image": "https://api.adorable.io/avatars/300/341",
-                "color": "#BFF288"
+                "image": "https://api.adorable.io/avatars/300/343",
+                "color": "#A5AAC5"
+            },
+            {
+                "image": "https://api.adorable.io/avatars/300/443",
+                "color": "#6FF2C5"
             }
         ]
     },
